@@ -17,18 +17,18 @@
   --muted-foreground: hsl(240, 5%, 55%);
   --border: hsl(240, 6%, 18%);
   --destructive: hsl(0, 84%, 60%);
-  
+
   /* Gradients */
   --gradient-brand: linear-gradient(135deg, hsl(262, 83%, 66%), hsl(160, 61%, 52%));
-  
+
   /* Glass */
   --glass-bg: hsla(240, 10%, 8%, 0.6);
   --glass-border: hsl(240, 6%, 25%);
-  
+
   /* Glows */
   --glow-violet: hsla(262, 83%, 66%, 0.5);
   --glow-mint: hsla(160, 61%, 52%, 0.5);
-  
+
   /* Spacing */
   --radius: 0.75rem;
 }
@@ -37,7 +37,9 @@
    Base Styles
 ======================================== */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -70,7 +72,12 @@ body {
    Typography
 ======================================== */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
   font-weight: 700;
 }
@@ -182,7 +189,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-img {
   height: 2.5rem;
-  width: 2.5rem;
+  width: auto;
   object-fit: contain;
 }
 
@@ -288,7 +295,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-bg-grid {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(to right, hsla(240, 6%, 15%, 0.4) 1px, transparent 1px),
     linear-gradient(to bottom, hsla(240, 6%, 15%, 0.4) 1px, transparent 1px);
   background-size: 60px 60px;
@@ -440,7 +447,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  box-shadow: 
+  box-shadow:
     0 0 40px -10px var(--glow-violet),
     0 0 60px -15px var(--glow-mint);
 }
@@ -517,10 +524,21 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.25rem;
 }
 
-.line-100 { width: 100%; }
-.line-85 { width: 85%; }
-.line-80 { width: 80%; }
-.line-60 { width: 60%; }
+.line-100 {
+  width: 100%;
+}
+
+.line-85 {
+  width: 85%;
+}
+
+.line-80 {
+  width: 80%;
+}
+
+.line-60 {
+  width: 60%;
+}
 
 .fresh-content.active .line-100 {
   background: var(--gradient-brand);
@@ -691,9 +709,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-.bento-icon.destructive svg { color: var(--destructive); }
-.bento-icon.success svg { color: var(--secondary); }
-.bento-icon.primary svg { color: var(--primary); }
+.bento-icon.destructive svg {
+  color: var(--destructive);
+}
+
+.bento-icon.success svg {
+  color: var(--secondary);
+}
+
+.bento-icon.primary svg {
+  color: var(--primary);
+}
 
 .bento-card h3 {
   font-size: 1.125rem;
@@ -706,7 +732,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Graphs */
-.decay-graph, .growth-graph {
+.decay-graph,
+.growth-graph {
   display: flex;
   align-items: flex-end;
   gap: 0.25rem;
@@ -875,7 +902,8 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-.features-orb-1, .features-orb-2 {
+.features-orb-1,
+.features-orb-2 {
   position: absolute;
   border-radius: 9999px;
   filter: blur(80px);
@@ -1090,7 +1118,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-logo img {
   height: 2rem;
-  width: 2rem;
+  width: auto;
   object-fit: contain;
 }
 
@@ -1134,9 +1162,12 @@ h1, h2, h3, h4, h5, h6 {
 ======================================== */
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -1146,6 +1177,7 @@ h1, h2, h3, h4, h5, h6 {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -1156,6 +1188,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1173,7 +1206,18 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
+.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.delay-2 {
+  transition-delay: 0.2s;
+}
+
+.delay-3 {
+  transition-delay: 0.3s;
+}
+
+.delay-4 {
+  transition-delay: 0.4s;
+}
