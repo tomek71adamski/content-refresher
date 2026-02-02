@@ -1017,9 +1017,6 @@ h6 {
   border-radius: 1rem;
   padding: 2rem;
   transition: all 0.3s;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 .pricing-card:hover {
@@ -1075,7 +1072,6 @@ h6 {
   flex-direction: column;
   gap: 0.75rem;
   margin-bottom: 2rem;
-  flex-grow: 1;
 }
 
 .pricing-features li {
@@ -1089,6 +1085,224 @@ h6 {
 .pricing-features svg {
   color: var(--secondary);
   flex-shrink: 0;
+}
+
+/* ========================================
+   Token Purchase Section
+======================================== */
+
+.tokens-section {
+  padding: 4rem 0 6rem;
+}
+
+.tokens-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.tokens-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tokens-title-group {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.tokens-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-brand);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tokens-icon svg {
+  color: white;
+}
+
+.tokens-card h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.tokens-subtitle {
+  color: var(--muted-foreground);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.tokens-badge {
+  padding: 0.5rem 1rem;
+  background: hsla(262, 83%, 66%, 0.1);
+  border: 1px solid hsla(262, 83%, 66%, 0.3);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.tokens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.token-card {
+  position: relative;
+  background: hsla(240, 10%, 8%, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.token-card:hover {
+  border-color: hsla(262, 83%, 66%, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px -8px var(--glow-violet);
+}
+
+.token-card.best-value {
+  border-color: hsla(262, 83%, 66%, 0.5);
+  background: hsla(262, 83%, 66%, 0.05);
+}
+
+.best-value-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.75rem;
+  background: var(--gradient-brand);
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: white;
+  white-space: nowrap;
+}
+
+.token-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.token-icon svg {
+  color: var(--primary);
+}
+
+.token-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.token-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+}
+
+.token-price {
+  margin-bottom: 0.5rem;
+}
+
+.token-price .price {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.token-rate {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.tokens-benefits {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: hsla(240, 10%, 8%, 0.3);
+  border-radius: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.benefit-item svg {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.btn-tokens {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .tokens-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .tokens-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tokens-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tokens-benefits {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .tokens-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ========================================
